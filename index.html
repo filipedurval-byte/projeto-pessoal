@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Planta Elétrica</h1>
+    </header>
+    
+    <section>
+        <form>
+            <fieldset>
+                <legend>Circuito</legend>
+
+                
+                <div class="linha">
+                    <label>N° de lâmpadas:</label>
+                    <input type="number">
+
+                    <div class="geral">
+                        <label>Potência (Watts):</label>
+                        <input type="number" id="watts" readonly>
+                    </div>
+                </div>
+                
+                <div class="linha">
+                    <label>N° de TUGs (Seco):</label>
+                    <input type="number">
+
+                    <div class="geral">
+                        <label>Potência (Watts):</label>
+                        <input type="number" id="watts" readonly>
+                    </div>
+                </div>
+                
+                <div class="linha">
+                    <label>N° de TUGs (Úmido):</label>
+                    <input type="number">
+
+                    <div class="geral">
+                        <label>Potência (Watts):</label>
+                        <input type="number" id="watts" readonly>
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <label>TUE:</label>
+                    <input type="text" placeholder="Item ex: Chuveiro">
+                    
+                    <div class="geral">
+                        <label>Potência (Watts):</label>
+                        <input type="number" id="watts" placeholder="Escreva a Potência">
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <label>Tensão do Circuito (Volts):</label>
+                    <select>
+                        <option>------</option>
+                        <option>127</option>
+                        <option>220</option>
+                    </select>
+                </div>
+
+                <div class="linha">
+                    <label>Tipo de Linha Elétrica:</label>
+                    <select>
+                        <option>----</option>
+                        <option>A1</option>
+                        <option>A2</option>
+                        <option>B1</option>
+                        <option>B2</option>
+                        <option>C</option>
+                        <option>D</option>
+                    </select>
+                </div>
+
+                <div class="linha">
+                    <label>N° de Condutores Carregados:</label>
+                    <select>
+                        <option>---</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset class="clima">
+                <legend>Fatores de Temperatura</legend>
+                <div class="linha">
+                    <label>Temperatura Ambiente (°C):</label>
+                    <select id="ambiente">
+                        <option>---</option>
+                    </select>
+                </div>
+
+                <div class="linha">
+                    <label>Circuitos Agrupados (N°):</label>
+                    <select id="agrupado">
+                        <option>---</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Outros Critérios</legend>
+                <div class="linha">
+                    <label>Comprimento do Fio (m):</label>
+                    <input type="number">
+                    <div class="geral">
+                        <label>Tipo do circuito:</label>
+                        <select>
+                            <option value="">---------------------------</option>
+                            <option value="">Tomada</option>
+                            <option value="">Iluminação</option>
+                            <option value="">Tomada e Iluminação</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <input type="submit" value="Concluir">
+        </form>
+    </section>
+
+    <footer><p>&copy;Filipe</p></footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
