@@ -19,37 +19,38 @@
         
                     <div class="linha">
                         <label>N° de lâmpadas:</label>
-                        <input type="number">
+                        <input type="number" id="n1" min="0" value="0">
                         <div class="geral">
                             <label>Potência (Watts):</label>
-                            <input type="number" id="watts" readonly>
+                            <input type="number" id="w1" readonly>
                         </div>
                     </div>
-        
+
                     <div class="linha">
                         <label>N° de TUGs (Seco):</label>
-                        <input type="number">
+                        <input type="number" id="n2" min="0" value="0">
                         <div class="geral">
                             <label>Potência (Watts):</label>
-                            <input type="number" id="watts" readonly>
+                            <input type="number" id="w2" readonly>
                         </div>
                     </div>
-        
+
                     <div class="linha">
                         <label>N° de TUGs (Úmido):</label>
-                        <input type="number">
+                        <input type="number" id="n3" min="0" value="0">
                         <div class="geral">
                             <label>Potência (Watts):</label>
-                            <input type="number" id="watts" readonly>
+                            <input type="number" id="w3" readonly>
                         </div>
                     </div>
+
                     <div class="linha">
                         <label>TUE:</label>
                         <input type="text" placeholder="Item ex: Chuveiro">
         
                         <div class="geral">
                             <label>Potência (Watts):</label>
-                            <input type="number" id="watts" placeholder="Escreva a Potência">
+                            <input type="number" id="watts" placeholder="Digite">
                         </div>
                     </div>
                     <div class="linha">
@@ -59,6 +60,7 @@
                             <option>127</option>
                             <option>220</option>
                         </select>
+                        
                     </div>
                     <div class="linha">
                         <label>Tipo de Linha Elétrica:</label>
@@ -71,6 +73,7 @@
                             <option>C</option>
                             <option>D</option>
                         </select>
+                        
                     </div>
                     <div class="linha">
                         <label>N° de Condutores Carregados:</label>
@@ -84,12 +87,12 @@
                 <fieldset class="clima">
                     <legend>Fatores de Temperatura</legend>
                     <div class="linha">
+                        
                         <label>Temperatura Ambiente (°C):</label>
                         <select id="ambiente">
                             <option>---</option>
                         </select>
-                    </div>
-                    <div class="linha">
+                        
                         <label>Circuitos Agrupados (N°):</label>
                         <select id="agrupado">
                             <option>---</option>
@@ -100,7 +103,7 @@
                     <legend>Outros Critérios</legend>
                     <div class="linha">
                         <label>Comprimento do Fio (m):</label>
-                        <input type="number">
+                        <input type="number" value="0" min="0">
                         <div class="geral">
                             <label>Tipo do circuito:</label>
                             <select>
@@ -112,7 +115,7 @@
                         </div>
                     </div>
                 </fieldset>
-                <input type="submit" value="Concluir">
+                <button type="submit">Concluir</button>
             </form>
         </section>
     </main>
