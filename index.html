@@ -12,117 +12,132 @@
     </header>
     
     <main>
-        <section>
-            <form>
-                <fieldset>
-                    <legend>Circuito</legend>
-        
-                    <div class="linha">
-                        <label>N° de lâmpadas:</label>
-                        <input type="number" id="n1" min="0" value="0">
-                        <div class="geral">
-                            <label>Potência (Watts):</label>
-                            <input type="number" id="w1" readonly>
-                        </div>
+        <form>
+            <fieldset>
+                <legend>Circuito</legend>
+    
+                <div class="linha">
+                    <label>N° de lâmpadas:</label>
+                    <input type="number" id="n1" min="0">
+                    <div class="geral">
+                        <label>Potência (Watts):</label>
+                        <input type="number" id="w1" readonly>
                     </div>
+                </div>
 
-                    <div class="linha">
-                        <label>N° de TUGs (Seco):</label>
-                        <input type="number" id="n2" min="0" value="0">
-                        <div class="geral">
-                            <label>Potência (Watts):</label>
-                            <input type="number" id="w2" readonly>
-                        </div>
+                <div class="linha">
+                    <label>N° de TUGs (Seco):</label>
+                    <input type="number" id="n2" min="0">
+                    <div class="geral">
+                        <label>Potência (Watts):</label>
+                        <input type="number" id="w2" readonly>
                     </div>
+                </div>
 
-                    <div class="linha">
-                        <label>N° de TUGs (Úmido):</label>
-                        <input type="number" id="n3" min="0" value="0">
-                        <div class="geral">
-                            <label>Potência (Watts):</label>
-                            <input type="number" id="w3" readonly>
-                        </div>
+                <div class="linha">
+                    <label>N° de TUGs (Úmido):</label>
+                    <input type="number" id="n3" min="0">
+                    <div class="geral">
+                        <label>Potência (Watts):</label>
+                        <input type="number" id="w3" readonly>
                     </div>
+                </div>
 
-                    <div class="linha">
-                        <label>TUE:</label>
-                        <input type="text" placeholder="Item ex: Chuveiro">
-        
-                        <div class="geral">
-                            <label>Potência (Watts):</label>
-                            <input type="number" id="watts" placeholder="Digite">
-                        </div>
+                <div class="linha">
+                    <label>TUE:</label>
+                    <input type="text" id="n4" placeholder="Item ex: Chuveiro">
+    
+                    <div class="geral">
+                        <label>Potência (Watts):</label>
+                        <input type="number" id="w4" placeholder="Digite">
                     </div>
-                    <div class="linha">
-                        <label>Tensão do Circuito (Volts):</label>
+                </div>
+                <div class="linha">
+                    <label>Tensão do Circuito (Volts):</label>
+                    <select id="volt">
+                        <option value="">Selecione...</option>
+                        <option>127</option>
+                        <option>220</option>
+                    </select>
+                    
+                </div>
+                <div class="linha">
+                    <label>Tipo de Linha Elétrica:</label>
+                    <select id="tipo">
+                        <option value="">Selecione...</option>
+                        <option>A1</option>
+                        <option>A2</option>
+                        <option>B1</option>
+                        <option>B2</option>
+                        <option>C</option>
+                        <option>D</option>
+                    </select>
+                    
+                </div>
+                <div class="linha">
+                    <label>N° de Condutores Carregados:</label>
+                    <select id="condutor">
+                        <option value="">Selecione...</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Fatores de Temperatura</legend>
+                <div class="linha">
+                    
+                    <label>Temperatura Ambiente (°C):</label>
+                    <select id="ambiente">
+                        <option></option>
+                    </select>
+                    
+                    <label>Circuitos Agrupados (N°):</label>
+                    <select id="agrupado">
+                        <option></option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Outros Critérios</legend>
+                <div class="linha">
+                    <label>Comprimento do Fio (m):</label>
+                    <input type="number" min="0">
+                    <div class="geral">
+                        <label>Tipo do circuito:</label>
                         <select>
-                            <option>------</option>
-                            <option>127</option>
-                            <option>220</option>
-                        </select>
-                        
-                    </div>
-                    <div class="linha">
-                        <label>Tipo de Linha Elétrica:</label>
-                        <select>
-                            <option>----</option>
-                            <option>A1</option>
-                            <option>A2</option>
-                            <option>B1</option>
-                            <option>B2</option>
-                            <option>C</option>
-                            <option>D</option>
-                        </select>
-                        
-                    </div>
-                    <div class="linha">
-                        <label>N° de Condutores Carregados:</label>
-                        <select>
-                            <option>---</option>
-                            <option>2</option>
-                            <option>3</option>
+                            <option value=""></option>
+                            <option>Tomada</option>
+                            <option>Iluminação</option>
+                            <option>Tomada e Iluminação</option>
                         </select>
                     </div>
-                </fieldset>
-                <fieldset class="clima">
-                    <legend>Fatores de Temperatura</legend>
-                    <div class="linha">
-                        
-                        <label>Temperatura Ambiente (°C):</label>
-                        <select id="ambiente">
-                            <option>---</option>
-                        </select>
-                        
-                        <label>Circuitos Agrupados (N°):</label>
-                        <select id="agrupado">
-                            <option>---</option>
-                        </select>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Outros Critérios</legend>
-                    <div class="linha">
-                        <label>Comprimento do Fio (m):</label>
-                        <input type="number" value="0" min="0">
-                        <div class="geral">
-                            <label>Tipo do circuito:</label>
-                            <select>
-                                <option value="">---------------------------</option>
-                                <option value="">Tomada</option>
-                                <option value="">Iluminação</option>
-                                <option value="">Tomada e Iluminação</option>
-                            </select>
-                        </div>
-                    </div>
-                </fieldset>
-                <button type="submit">Concluir</button>
-            </form>
-        </section>
+                </div>
+            </fieldset>
+            <button type="button" onclick="tabela.salvar()">Salvar</button>
+            <button type="button" onclick="tabela.excluir()">Excluir</button>
+            
+            <div class="content">
+                <table border="1">
+                    <thead>
+                        <th>Circuito</th>
+                        <th>Potência</th>
+                        <th>Tensão</th>
+                        <th>Corrente</th>
+                        <th>Linha Elétrica</th>
+                        <th>Condutores Carregados</th>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+        </form>
     </main>
 
     <footer><p>&copy;Filipe</p></footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </body>
 </html>

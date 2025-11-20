@@ -17,12 +17,11 @@ main {
 
 body {
     background-color: #4285f4;
-    color: #000;
-    text-align: center;
     margin: 0px;
     padding: 0px;
+    margin: 0px auto;
     box-sizing: border-box;
-
+    text-align: center;
 }
 
 header h1 {
@@ -63,10 +62,10 @@ fieldset {
 
 .geral label {
     font-weight: bold;
-    min-width: 120px;
+    min-width: 120px; 
 }
 
-button[type="submit"] {
+button[type="button"] {
     background-color: #4285f4;
     color: white;
     border: none;
@@ -104,4 +103,25 @@ input::placeholder {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     display: none;
+}
+
+.content{
+    margin-top: 20px;
+}
+
+table {
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid #000000;
+    width: 100%;
+}
+
+table th{
+    background-color: orange;
+    font-style: italic;
+    
+}
+
+table th, td{
+    padding: 1px 5px;
 }
